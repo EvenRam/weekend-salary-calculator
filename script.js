@@ -20,5 +20,13 @@ function handleSubmit(event){
      let inputSalary = document.getElementById("annualSalaryInput").value
     console.log( `input is ${inputSalary}`);
 
-    //let tableInfo
+    let tableInfo = document.getElementById("employeesInfo")
+    console.log("current table text", tableInfo );
+    tableInfo.innerHTML += 
+    `   <td>${firstNameInput}</td>
+        <td>${lastNameInput}</td>
+        <td>${idNumber}</td>
+        <td>${inputTitle}</td>
+        <td>${inputSalary}</td>
+    `
 }
