@@ -3,6 +3,7 @@ onReady();
 function onReady() {
   console.log('Javascript is working!');
 }
+let totalMonthlyCost = 0
 
 function handleSubmit(event){
     console.log(" The handleSubmit() is working")
@@ -28,5 +29,16 @@ function handleSubmit(event){
         <td>${idNumber}</td>
         <td>${inputTitle}</td>
         <td>${inputSalary}</td>
-    `
+        <td button onclick = "deleteEmployee(event)"></td
+
+
+        
+    `;
+ document.getElementById("firstNameInput" ).value = ""
+ document.getElementById("lastNameInput" ).value = ""
+ document.getElementById("idInput" ).value = ""
+ document.getElementById("titleInput" ).value = ""
+ document.getElementById("annualSalaryInput" ).value = ""
+
+
 }
