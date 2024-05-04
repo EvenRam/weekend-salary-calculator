@@ -1,0 +1,47 @@
+h1{
+    background-color: rgb(138, 127, 175);
+    text-align: center;
+    border-style:solid;
+    padding: 15px;
+    margin-right:50px;
+    margin-left: 15px;
+}
+
+table {
+    width: 75%;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+  }
+
+  th, td {
+    padding: .8em;
+    min-width: 3.5em;
+    margin-left: 150px;
+  }
+
+  thead {
+    background: rgb(210, 221, 225);
+    color: black;
+    
+  }
+
+
+
+h2{
+    margin-left: 10px;
+
+}
+Footer{
+
+    margin-left: 515px;
+    
+}
+
+div{
+    margin-left: 125px;
+
+}
