@@ -3,7 +3,6 @@ onReady();
 function onReady() {
   console.log('Javascript is working!');
 }
-let totalMonthlyCost = 0
 
 function handleSubmit(event){
     console.log(" The handleSubmit() is working")
@@ -21,24 +20,42 @@ function handleSubmit(event){
      let inputSalary = document.getElementById("annualSalaryInput").value
     console.log( `input is ${inputSalary}`);
 
-    let tableInfo = document.getElementById("employeesInfo")
-    console.log("current table text", tableInfo );
+    let tableInfo = document.querySelector("tbody")
+     console.log("current table text", tableInfo );
+
     tableInfo.innerHTML += 
+    
     `   <td>${firstNameInput}</td>
         <td>${lastNameInput}</td>
         <td>${idNumber}</td>
         <td>${inputTitle}</td>
         <td>${inputSalary}</td>
-        <td button onclick = "deleteEmployee(event)"></td
-
-
-        
+        <td button onClick = "deleteEmployee(event)">Delete</button></td>
     `;
+
+    // clearing form inputs
  document.getElementById("firstNameInput" ).value = ""
  document.getElementById("lastNameInput" ).value = ""
  document.getElementById("idInput" ).value = ""
  document.getElementById("titleInput" ).value = ""
  document.getElementById("annualSalaryInput" ).value = ""
 
-
 }
+//function to delete New Empolyee 
+// function deleteEmployee(event){
+//     console.log("DeleteEmployee() works")
+
+
+//     let thistableInfo = event.target
+//         console.log("thistableInf is..", thistableInfo);
+//         thistableInfo.remove()
+// }
+
+function deleteEmployee(event){
+    event.target.parentElement.remove();
+    }
+    
+
+
+
+
