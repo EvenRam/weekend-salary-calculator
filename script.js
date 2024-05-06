@@ -54,9 +54,13 @@ let getemployeemonthly = inputSalary / 12;
 totalMonthlyCost += getemployeemonthly;
 footerAmount.innerHTML = totalMonthlyCost 
 
-
+let footer=document.getElementById("totalEmployeeMonthly")
+if(totalMonthlyCost > 20000){
+    footer.classList.add("overBudget")
+}
 
 console.log("empolyeesTotalMonthly",getemployeemonthly);
+
 
 
 

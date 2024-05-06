@@ -41,6 +41,11 @@ Footer{
     
 }
 
+.overBudget{
+   color: red;
+    font-weight: bold;
+}
+
 div{
     margin-left: 125px;
 
