@@ -4,6 +4,10 @@ function onReady() {
   console.log('Javascript is working!');
 }
 
+let totalMonthlyCost = 0
+
+
+
 function handleSubmit(event){
     console.log(" The handleSubmit() is working")
     //console.log("event", event);
@@ -20,6 +24,9 @@ function handleSubmit(event){
      let inputSalary = document.getElementById("annualSalaryInput").value
     console.log( `input is ${inputSalary}`);
 
+
+
+
     let tableInfo = document.querySelector("tbody")
      console.log("current table text", tableInfo );
 
@@ -30,8 +37,27 @@ function handleSubmit(event){
         <td>${idNumber}</td>
         <td>${inputTitle}</td>
         <td>${inputSalary}</td>
-        <td button onClick = "deleteEmployee(event)">Delete</button></td>
+    <td> <button onClick="deleteEmployeeRow(event)">Delete</button></td>
     `;
+
+
+    //**  Updates the total monthly salary value when a single employee is added 
+//Updates the total monthly salary value when multiple employees are added 
+// Applies the 'over-budget' CSS class to the footer when the total monthly salary exceeds $20,000 
+
+// 1. get monthly salary by dividing the inputSalary by 12 (inputSalary type is already a number)
+
+
+let employeeTotalMonthly = inputSalary / 12;
+totalMonthlyCost = employeeTotalMonthly;
+//totalMonthlyCost.innerHTML = Number(totalMonthlyCost);
+
+// input salary was console logging NAN OR NULL
+//console.log("inputsalary",inputSalary);
+
+console.log("empolyeesTotalMonthly",employeeTotalMonthly);
+//console.log("getemployeemonthly:", getEmployeeMonthly);
+
 
     // clearing form inputs
  document.getElementById("firstNameInput" ).value = ""
@@ -40,20 +66,30 @@ function handleSubmit(event){
  document.getElementById("titleInput" ).value = ""
  document.getElementById("annualSalaryInput" ).value = ""
 
+ 
+
 }
+
+
+
 //function to delete New Empolyee 
-// function deleteEmployee(event){
+function deleteEmployeeRow(event){
+    console.log("DeleteEmployee() works")
+
+
+    let thistableInfo = event.target.closest("tr");
+        console.log("thistableInf is..", thistableInfo);
+        thistableInfo.remove()
+}
+
+    
+
+
+// function deleteEmployeeRow(event){
+//     event.target.parentElement.remove();
 //     console.log("DeleteEmployee() works")
 
-
-//     let thistableInfo = event.target
-//         console.log("thistableInf is..", thistableInfo);
-//         thistableInfo.remove()
-// }
-
-function deleteEmployee(event){
-    event.target.parentElement.remove();
-    }
+//     }
     
 
 
