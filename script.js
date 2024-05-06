@@ -45,18 +45,31 @@ function handleSubmit(event){
 //Updates the total monthly salary value when multiple employees are added 
 // Applies the 'over-budget' CSS class to the footer when the total monthly salary exceeds $20,000 
 
-// 1. get monthly salary by dividing the inputSalary by 12 (inputSalary type is already a number)
+//  declare footeramount and get the value from dom.getelement" with the name of totalEmployeeMonthly
+let footerAmount = document.getElementById("totalEmployeeMonthly")
+//  get monthly salary by dividing the inputSalary by 12 (inputSalary type is already a number)
+let getemployeemonthly = inputSalary / 12;
+//console.log("empolyeesTotalMonthly",getemployeemonthly);
+
+totalMonthlyCost += getemployeemonthly;
+footerAmount.innerHTML = totalMonthlyCost 
 
 
-let employeeTotalMonthly = inputSalary / 12;
-totalMonthlyCost = employeeTotalMonthly;
+
+console.log("empolyeesTotalMonthly",getemployeemonthly);
+
+
+
+
+
+
 //totalMonthlyCost.innerHTML = Number(totalMonthlyCost);
 
 // input salary was console logging NAN OR NULL
 //console.log("inputsalary",inputSalary);
 
-console.log("empolyeesTotalMonthly",employeeTotalMonthly);
 //console.log("getemployeemonthly:", getEmployeeMonthly);
+
 
 
     // clearing form inputs
